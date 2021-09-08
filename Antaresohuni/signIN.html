@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title> Antaresohuni </title>
+    <link rel="stylesheet" href="signIN.css">
+    <script type="text/javascript">
+      function openRegister() {
+        card.style.transform = "rotateY(-180deg)";
+      }
+
+      function openLogin() {
+        card.style.transform = "rotateY(0deg)";
+      }
+
+      function validim(){
+        var passwordi = document.getElementById('password').value;
+        if (passwordi.length < 6){
+          alert('Passwordi gabuar!!');
+        } else if (passwordi == '') {
+          alert('Ju lutem plotesoni formen e passwordit!')
+        }
+        
+      }
+      function konfirmopass(){
+        var pass = document.getElementById('pass').value;
+        if(pass.length < 6 ){
+          alert('Fjalekalimi eshte shume i shkurter');
+        }
+        var konfirmimi = document.getElementById('pass_konfirm').value;
+        if(pass != konfirmimi || konfirmimi != pass){
+          alert('Fjalekalimi nuk eshte i njejte')
+        }
+      }
+    </script>
+</head>
+<body>
+    <section>
+      <div class="e_gjitha">
+      <div class="pjesa_brenda" id="card">
+
+      <div class="forma_login">
+        <h2>LOGIN</h2>
+
+        <form>
+        <div class="pjesa_pare">
+          <input type="email" class="pjesa_input" placeholder="Email" required>
+          <input type="password" class="pjesa_input" placeholder="Fjalekalimi" id="password" required>
+        </div>
+        
+        <div class="pjesa_dyte">
+        <div>
+          <input type="checkbox">
+          <label> Me kujto </label>
+        </div>
+          <button type="submit" class="butoni_submit" onclick="validim()">Login</button>
+        </div>
+        </form>
+
+        <div class="pjesa_trete">
+          <button type="button" class="butoni_flip" onclick="openRegister()" name="button"> Regjistrohuni </button>
+        <div class="ndaresi_login_register"></div>
+          <a href="#">Harruat Fjalekalimin?</a>
+        </div>
+
+        <div class="footer-section">
+          <a href="#" class="social-butoni facebook-butoni">
+          <img src="facebook.png" alt="">
+          <span>Login me Facebook</span>
+          </a>
+
+          <a href="#" class="social-butoni google-butoni">
+          <img src="google.png" alt="">
+          <span>Login me Google</span>
+          </a>
+        </div>
+        </div>
+
+        <div class="forma_regjisrimit">
+          <h2>Regjistrohuni</h2>
+          <form>
+          <div class="pjesa_pare">
+            <input type="text" class="pjesa_input" placeholder="Emri" required>
+            <input type="email" class="pjesa_input " placeholder="Emaili" required>
+            <input type="password" class="pjesa_input " placeholder="Fjalekalimi" required id="pass">
+            <input type="password" class="pjesa_input " placeholder="Konfirmoni Fjakelakimin" required id="pass_konfirm">
+          </div>
+
+          <div class="pjesa_dyte">
+          <div>
+            <input type="checkbox">
+            <label> Me kujto </label>
+          </div>
+            <button type="submit" class="butoni_submit" onclick="konfirmopass()">Regjistrohuni</button>
+          </div>
+          </form>
+          <div class="pjesa_trete">
+            <button type="button" class="butoni_flip" onclick="openLogin()" name="button">Login</button>
+          </div>
+          <div class="footer-section">
+            <a href="#" class="social-butoni facebook-butoni">
+            <img src="facebook.png" alt="">
+            <span>Regjistrohuni me Facebook</span>
+            </a>
+            <a href="#" class="social-butoni google-butoni">
+            <img src="google.png" alt="">
+            <span>Regjistrohuni me Google</span>
+            </a>
+          </div>
+      </div>
+      </div>
+      </div>
+    </section>
+</body>
+</html>

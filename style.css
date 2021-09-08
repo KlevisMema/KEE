@@ -1,0 +1,857 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Work+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300&display=swap');
+
+/* Pjesa e pergjithshme */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;/* padding the borderi perfshihen ne width dhe height*/
+	zoom : 100%;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+	zoom: 100%;
+}
+a{
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+}
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover; /* Nëse raporti i pamjes së objektit nuk përputhet me raportin e kutisë së tij, atëherë objekti do të pritet për tu përshtatur. */
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title span {
+	color:#C76276;
+}
+.cta {
+	display: inline-block; /* respektohen kufijtë (margins)/ shtresat e sipërme (paddings) dhe të poshtme, */
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid rgb(218, 91, 116);
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease; /* percakton nje efekt me nje fillim te ngadalte*/
+	
+}
+.cta:hover{
+	color: white;
+	background-color: #C76276;
+}
+.brandi h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+	position: absolute;
+	margin-left: -200px;
+	margin-top: -20px;
+	width: 20%;
+}
+.brandi h1 span {
+	color: rgb(218, 91, 116);
+}
+/* Fund pjesa e pergjithshme */
+
+/* EDLIRA */
+/* Koka */
+#koka {
+	position: fixed; /* është i pozicionuar relativisht me viwporten, që do të thotë se qëndron gjithmonë në të njëjtin vend edhe nëse faqja lëviz. */
+	z-index: 1000;
+	left: 0; /* dikon në pozicionin horizontal të një elementi të pozicionuar. Kjo veti nuk ka efekt në elementet jo të pozicionuara. */
+	top: 0;
+	width: 100%;
+	height: auto;
+}
+#koka .koka {
+	min-height: 8vh;	
+}
+#koka .shiriti_navigimit {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+}
+
+#koka .lista_navigimit ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#koka .lista_navigimit ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+	margin-left: -5px;
+}
+#koka .lista_navigimit ul li:hover a {
+	color:rgb(218, 91, 116);
+}
+#koka .lista_navigimit{
+	margin-right: -250px;
+}
+/* Koka */
+
+/* Shprehje motivuese */
+#shprehje {
+	background-image: url(./img/backgroud_.jpg);
+	width: 100%;
+	background-size: cover;
+	background-position: top center;
+	position:relative;
+	z-index: 1;
+	padding-bottom: 20px;
+}
+#shprehje::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+	z-index: -1;
+}
+#shprehje .shprehje {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 60px;
+	justify-content: flex-start; /* items janë pozicionuar në fillim të kontejnerit */
+}
+#shprehje h1 {
+	display: block;
+	width: fit-content;
+	font-size: 4rem;
+	position: relative;
+	color: transparent;
+	animation: text_reveal 0.5s ease forwards;
+	animation-delay: 1s;
+}
+#shprehje h1:nth-child(1) {
+	animation-delay: 1s;
+}
+#shprehje h1:nth-child(2) {
+	animation-delay: 2s;
+}
+#shprehje h1:nth-child(3) {
+	animation: shfaq_ngjyren 0.5s ease forwards;
+	animation-delay: 3s;
+}
+#shprehje h1 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	background-color:rgb(218, 91, 116);
+	animation: text_reveal_box 1s ease;
+	animation-delay: 0.5s;
+}
+
+/*Fund shprehja motivuese*/
+
+/* Programet */
+#programet .programet {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#programet .programet_koka {
+	max-width: 500px;
+	margin: 0 auto;
+}
+#programet .programet_trupi {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap; /* Specifikon që artikujt fleksibël do të mbështillen nëse është e nevojshme */
+	margin-top: 50px;
+}
+#programet .ikona {
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+#programet .ikona::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.9;
+	z-index: -1;
+}
+#programet .programet_trupi .ikona_2 {
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+#programet .ikona h2 {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+#programet .ikona p {
+	color: white;
+	text-align: left;
+}
+.ikona{
+	transition: 0.7s;
+}
+.ikona:hover{
+	transform: translateY(-30px); /* do marin efekt pjesa vertiakle*/
+}
+/* Fund programet */
+
+/* Ushqimet  */
+#receta .receta{
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#receta .receta_koka h1 {
+	margin-bottom: 50px;
+}
+/*
+#receta .e_gjitha {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+*/
+#receta .ushqime-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 10px;
+}
+#receta .ushqime-info {
+	padding: 30px;
+	flex-basis: 50%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	background-image: linear-gradient(60deg, #e096b5 0%, #485563 100%);
+	color: white;
+}
+#receta .ushqime-info h1 {
+	font-size: 4rem;
+	font-weight: 500;
+}
+#receta .ushqime-info h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-top: 10px;
+}
+#receta .ushqime-info p {
+	color: white;
+}
+#receta .foto {
+	flex-basis: 50%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+#receta .foto:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.7;
+}
+#receta .foto img {
+	transition: 0.3s ease transform;
+}
+#receta .ushqime-item:hover .foto img {
+	transform: scale(1.1);
+}
+/* Fund ushqimet */
+
+/* Rrreth Nesh*/
+.klevis_mema span{
+	color: #ffcb6b;
+}
+.pjesa_fotos .klevis {
+	transition: 0.5s;
+}
+.pjesa_fotos .klevis:hover{
+	transform: translateX(25px);
+	box-shadow: 6px 6px 12px #ffcb6b;
+	border-radius: 20%;
+}
+.pjesa_fotos .edlira {
+	transition: 0.5s;
+}
+.pjesa_fotos .edlira:hover{
+	transform: translateX(25px);
+	box-shadow: 6px 6px 12px #C76276;
+	border-radius: 20%;
+}
+.pjesa_fotos .ersi{
+	transition: 0.5s;
+}
+.pjesa_fotos .ersi:hover{
+	transform: translateX(25px);
+	box-shadow: 6px 6px 12px #0BB5FF;
+	border-radius: 20%;
+}
+.rreth_nesh .co-founders h3{
+	position: absolute;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: -400;
+	margin-left: 600px;
+	font-size: 70px;
+	font-family: 'Montserrat', sans-serif;
+	color: #29323c;
+	letter-spacing: 2px;
+	font-weight: 300;
+}
+
+.pjesa_pershkrimit .section-title{
+	font-size: 40px;
+}
+.klevi {
+	transition: ease-in-out 1.0s;
+	box-shadow: inset 0 0 0 0 #ffcb6b;
+    outline: none;
+	border-color: #ffcb6b;
+}
+.klevi:hover {
+    transform: scale(1.15);
+    box-shadow: inset 360px 0 0 0 #ffcb6b;
+	background-color:#ffcb6b;
+}
+.portokalli{
+	color: #ffcb6b;
+}
+.roze{
+	color: #C76276;
+}
+.blu{
+	color: #0BB5FF;
+}
+.brari span{
+	color: #0BB5FF;
+}
+.ersii:hover {
+	background-color:#0BB5FF;
+}
+.ersii {
+	transition: ease-in-out 1.0s;
+	box-shadow: inset 0 0 0 0 #0BB5FF;/*Ndryshon hijen nga një hije e jashtme në një hije të brendshme*/
+    outline: none;
+	border-color: #0BB5FF ;
+}
+.ersii:hover {
+    transform: scale(1.15);
+    box-shadow: inset 320px 0 0 0 #0BB5FF;
+}
+.edlira {
+	transition: ease-in-out 1.0s;
+	box-shadow: inset 0 0 0 0 #C76276;
+    outline: none;
+}
+.edlira:hover {
+    transform: scale(1.15);
+    box-shadow: inset 360px 0 0 0 #C76276;
+	background-color:#C76276;
+}
+
+#rreth_nesh .rreth_nesh {
+	flex-direction: column-reverse; /* ndryshon pozicionimin e fotove nga e fundit tek e para */
+	text-align: center;
+	margin: 0 auto;
+	padding: 90px 20px;
+}
+#rreth_nesh .pjesa_fotos {
+	width: 250px;
+	height: 360px;
+}
+#rreth_nesh .pjesa_pershkrimit {
+	width: 100%;
+}
+#rreth_nesh .pjesa_pershkrimit h2 {
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+}
+#rreth_nesh .pjesa_pershkrimit p {
+	margin-bottom: 20px;
+}
+#rreth_nesh .pjesa_pershkrimit .cta {
+	color: black;
+	margin-bottom: 50px;
+	padding: 10px 20px;
+	font-size: 20px;
+}
+#rreth_nesh .pjesa_fotos .fotoja {
+	width: 300px;
+	height: 400px;
+	position: relative;	/* pozicioni normal i elementit*/
+}
+/* Fund rreth nesh */
+
+/* Pjesa fundore */
+#fundi {
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#fundi .fundi {
+	min-height: 200px;
+	flex-direction: column;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+#fundi h2 {
+	color: white;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: 0.1rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#fundi .rrjetet_sociale_grupimi {
+	display: flex; /* ikoant mi pozicionon ne rresht*/
+	margin-bottom: 30px;
+}
+#fundi .rrjeti_social_ikona {
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+}
+#fundi .rrjeti_social_ikona img {
+	filter: grayscale(1);
+	transition: 0.3s ease filter;
+}
+#fundi .rrjeti_social_ikona:hover img {
+	filter: grayscale(0);
+}
+#fundi p {
+	color: white;
+	font-size: 1.3rem; /* afersisht 16px */
+}
+#fundi .brandi{
+	margin-left: 200px;
+	margin-bottom: 10px;
+}
+/* Fund */
+
+/* Keyframes per animacionin e faqes se fillmit  */
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
+}
+@keyframes shfaq_ngjyren {
+	100% {
+		color: rgb(218, 91, 116);
+		font-weight: 500;
+	}
+}
+/* Fund Keyframes */
+
+/* Media Query per tablet ose ekrane me width me te madh se minimuni i percaktuar */
+@media only screen and (min-width: 768px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 6rem;
+	}
+	#shprehje h1 {
+		font-size: 7rem;
+	}
+	
+	#programet .programet_trupi .ikona {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+	#receta .ushqime-item {
+		flex-direction: row;
+	}
+	#receta .ushqime-item:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+	#receta .ushqime-item {
+		height: 400px;
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+	#receta .e_gjitha .ushqime-info {
+		height: 100%;
+	}
+	#receta .e_gjitha .foto {
+		height: 100%;
+	}
+	#rreth_nesh .rreth_nesh {
+		flex-direction: row;
+	}
+	#rreth_nesh .pjesa_fotos {
+		width: 600px;
+		height: 400px;
+		padding-left: 60px;
+	}
+	#rreth_nesh .rreth_nesh .pjesa_fotos .fotoja::after {
+		left: -45px;
+		top: 34px;
+		height: 98%;
+		width: 98%;
+		border: 10px rgb(218, 91, 116);
+	}
+	#rreth_nesh .pjesa_pershkrimit {
+		text-align: left;
+		padding: 30px;
+	}
+	#rreth_nesh .pjesa_pershkrimit h1 {
+		text-align: left;
+	}
+	#contact .contact {
+		flex-direction: column;
+		padding: 100px 0;
+		align-items: center;
+		justify-content: center;
+		min-width: 20vh;
+	}
+	#contact .contact-items {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin: 0;
+	}
+	#contact .contact-item {
+		width: 30%;
+		margin: 0;
+		flex-direction: row;
+	}
+	#contact .contact-item .ikona_2 {
+		height: 100px;
+		width: 100px;
+	}
+	#contact .contact-item .ikona_2 img {
+		object-fit: contain;
+	}
+	#contact .contact-item .contact-info {
+		width: 100%;
+		text-align: left;
+		padding-left: 20px;
+	}
+}
+/* Fund */
+
+/* Media Query per ekranet me madhesi me te madhe width se 1200px */
+@media only screen and (min-width: 1200px) {
+	/*
+	#koka .lista_navigimit_2 {
+		display: none;
+	}*/
+	#koka .lista_navigimit ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#koka .lista_navigimit ul li {
+		display: inline-block;
+	}
+	#koka .lista_navigimit ul li a {
+		font-size: 1.8rem;
+	}
+	/*
+	#koka .lista_navigimit ul a:after {
+		display: none;
+	}*/
+	
+	#programet .programet_trupi .ikona {
+		flex-basis: 22%;
+		margin: 1.5%;
+	}
+}
+
+@media only screen and (max-width : 1695px) {
+	.pjesa_fotos .fotoja img{
+		width: 70%;
+		height: 70%;
+		margin-left: -50%;
+		margin-top: 30%;
+	}
+	.pjesa_pershkrimit{
+		margin-left: -6%;
+		margin-top: 6%;
+	}
+	.rreth_nesh .co-founders h3{
+		margin-left: 30%;
+	}
+}
+/* Query per ekrarnin e telefonit */
+@media only screen and (max-width : 625px) {
+	.brandi h1 {
+		width: 33%;
+	}
+	.rreth_nesh .co-founders h3 {
+		margin-left: -48%;
+		margin-top: -340%;
+	}
+	.pjesa_fotos .fotoja img{
+		margin-top: -6%;
+		margin-left: -30%;
+	}
+	.koka .shiriti_navigimit .brandi h1{
+		margin-left: 30%;
+	}
+}
+/* Fund */
+
+/* Pse ne  */
+.container__{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 70%;
+}
+
+.Pse_ne_header h3{
+    margin: 0 auto 10px;
+    padding-top: 30px;
+    color: #2D383C;
+    text-align: center;
+    font-size: 54px;
+    width: 90%;
+    font-family: 'Work Sans', sans-serif;
+}
+.Pse_ne_header h3 span {
+	color:rgb(218, 91, 116); 
+}
+.paragraf {
+	text-align: center;
+    text-transform: uppercase;
+    margin: 40px auto 40px;
+    width: 50%;
+    font-size: 21px;
+    line-height: 28px;
+    font-family: 'Work Sans', sans-serif;
+}
+.Pse_ne_header p {
+	text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto 10px;
+    width: 70%;
+    font-size: 21px;
+    line-height: 1.25em;
+    font-family: 'Work Sans', sans-serif;
+	border-style:none;
+}
+.Pse_ne_header h4 {
+    text-transform: uppercase;
+    color: #2D383C;
+    font-size: 24px;
+	text-align: center;
+}
+.Asete{
+	width: 400px;
+	height: 400px;
+	border: 5px solid #29323c ;
+	margin: 20px;
+	float: left;
+	background-color: #D17486;
+	transition: 0.7s;
+}
+.Asete:hover {
+	transform: scale(1.2);
+	box-shadow: 3px 3px 3px #000;
+	background-color:#29323c ;
+	border: 4px solid #C76276 ;
+	border-radius: 15%;
+}
+.Asete:hover h4 , .Asete:hover p{
+	color:#C76276;
+}
+.Asete h4{
+	margin: 30px;
+	color:#2D383C;
+}
+.Asete p {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	color:#29323c;
+}
+
+.sherbimet{
+	margin-left: 75px;
+}
+
+@media (max-width : 700px) and (min-width : 600px){
+	.container__{
+		height: 230%;
+	}
+	
+}
+@media (max-width : 1500px) and (min-width : 700px){
+	.container__{
+		height: 220%;
+	}
+	.Asete{
+		margin-left: 100px;
+	}
+}
+@media (max-width : 1300px) and (min-width : 900px){
+	.container__{
+		height: 217%;
+	}
+	.Asete{
+		margin-left: 200px;
+	}
+	
+}
+@media (max-width : 1400px) and (min-width : 950px){
+	.container__{
+		height: 220%;
+	}
+	.Asete{
+		margin-left: 235px;
+	}
+}
+@media (max-width : 1500px) and (min-width : 900px){
+	.container__{
+		height: 120%;
+	}
+	.Asete{
+		margin-left: 160px;
+	}
+}
+/* kur ekrani behet gjysme*/
+@media (min-width : 700px) and (max-width : 1200px) {
+	.container__{
+		height: 125%;
+	}
+	.Asete{
+		margin-left: -10px;
+	}
+	.Asete:hover {
+		transform: scale(1);
+		box-shadow: 3px 3px 3px #000;
+		background-color:#29323c ;
+		border: 4px solid #C76276 ;
+		border-radius: 15%;
+	}
+	.Asete:hover h4 , .Asete:hover p{
+		color:#C76276;
+	}
+	.brandi h1 {
+		width: 21%;
+	}
+	.pjesa_fotos .fotoja img{
+		margin-top: 10%;
+		margin-left: -30%;
+		width: 40%;
+		height: 40%;
+	}
+	.rreth_nesh .co-founders h3 {
+		margin-left: 55%;
+	}
+	.pjesa_pershkrimit{	
+		margin-left: -35%;
+		margin-top: 30%;
+	}
+	.pjesa_pershkrimit .section-title  {
+		font-size: 20px;
+		width: 100%;
+	}
+	.rreth_nesh .co-founders h3{
+		margin-left: 17%;
+	}	
+	.koka .shiriti_navigimit .brandi h1{
+		margin-left: 40%;
+	}
+}
+/* Fundi Pse Ne  */
+
+/* skroll bari */
+/* Ersian Brari*/
+::-webkit-scrollbar{/* pjesa qe mban thumbin (shiriti scrollit) */
+	width: 12px;
+	background-color: #485563;
+}
+::-webkit-scrollbar-thumb{ /* thumbi */
+	background: linear-gradient(transparent , #C76276);
+	border-radius: 15px;
+}
+/* Fund skroll bar*/
